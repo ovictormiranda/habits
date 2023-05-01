@@ -24,7 +24,7 @@ export function New(){
   async function handleCreateNewHabit(){
     try {
       if (!title.trim() || weekDays.length === 0) {   //o .trim() remove os espaços na verificaçao, ou seja, se o usuario tentar criar um hábito apenas "digitando" um espaço, ele nao vai conseguir.
-        Alert.alert('Novo Hábito', 'Informe o nome do hábito e defina a periodicidade.')
+       return Alert.alert('Novo Hábito', 'Informe o nome do hábito e defina a periodicidade.')
       }
 
       await api.post('/habits', { title, weekDays });
